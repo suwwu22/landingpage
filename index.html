@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bagas Satrio Himawan — Mahasiswa Sistem Informasi UNNES & UI/UX Enthusiast</title>
+  <meta name="description" content="Website portofolio Bagas Satrio Himawan — Mahasiswa Sistem Informasi UNNES dengan minat mendalam pada UI/UX Design, antarmuka minimalis, dan kepemimpinan organisasi." />
+
+  <!-- Google Fonts: Rubik untuk aksen tegas & Plus Jakarta Sans untuk teks bacaan -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Rubik:wght@500;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS Hasil Build Tailwind -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-cream font-body text-navy-dark antialiased selection:bg-yellow selection:text-navy-dark overflow-x-hidden min-h-screen flex flex-col justify-between">
+
+  <!-- =========================================================
+       STICKY FLOATING NAVBAR
+  ========================================================== -->
+  <header class="sticky top-0 z-50 w-full bg-cream/90 backdrop-blur-md border-b-2 border-navy-dark/15 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 sm:h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo / Avatar -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-navy flex items-center justify-center text-yellow font-display font-black text-xl border-2 border-navy-dark shadow-neo-sm group-hover:-translate-y-0.5 group-hover:bg-navy-dark transition-all">
+          B
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-black text-lg tracking-wide text-navy-dark group-hover:text-navy transition-colors">
+            BAGAS SATRIO
+          </span>
+          <div class="flex items-center gap-1.5 text-[11px] font-semibold text-navy-dark/75">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-status"></span>
+            <span>Sistem Informasi UNNES</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-xs lg:text-sm font-bold text-navy-dark/80">
+        <a href="#about" class="nav-link px-3 py-1.5 rounded-lg hover:text-navy-dark hover:bg-yellow/40 transition-all">Tentang</a>
+        <a href="#education" class="nav-link px-3 py-1.5 rounded-lg hover:text-navy-dark hover:bg-yellow/40 transition-all">Pendidikan</a>
+        <a href="#experience" class="nav-link px-3 py-1.5 rounded-lg hover:text-navy-dark hover:bg-yellow/40 transition-all">Organisasi</a>
+        <a href="#skills" class="nav-link px-3 py-1.5 rounded-lg hover:text-navy-dark hover:bg-yellow/40 transition-all">Keahlian &amp; Minat</a>
+        <a href="#contact" class="nav-link px-3 py-1.5 rounded-lg hover:text-navy-dark hover:bg-yellow/40 transition-all">Kontak</a>
+      </nav>
+
+      <!-- Desktop Action Button -->
+      <div class="hidden md:flex items-center gap-3">
+        <a
+          href="#contact"
+          class="btn-neo inline-flex items-center gap-2 bg-yellow hover:bg-yellow-deep text-navy-dark font-extrabold text-xs lg:text-sm px-5 py-2.5 rounded-xl border-2 border-navy-dark shadow-neo-sm"
+        >
+          <span>Mari Ngobrol</span>
+          <span class="text-base">👋</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button
+        id="menuToggle"
+        type="button"
+        aria-label="Toggle navigasi menu"
+        aria-expanded="false"
+        class="md:hidden w-11 h-11 rounded-xl bg-white border-2 border-navy-dark shadow-neo-sm flex items-center justify-center text-navy-dark hover:bg-yellow/30 active:scale-95 transition-all"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t-2 border-navy-dark/15 bg-cream-card px-6 py-5 shadow-lg">
+      <nav class="flex flex-col gap-3 font-bold text-navy-dark">
+        <a href="#about" class="mobile-nav-link p-2 rounded-lg hover:bg-yellow/40 transition-colors">Tentang Saya</a>
+        <a href="#education" class="mobile-nav-link p-2 rounded-lg hover:bg-yellow/40 transition-colors">Pendidikan</a>
+        <a href="#experience" class="mobile-nav-link p-2 rounded-lg hover:bg-yellow/40 transition-colors">Pengalaman Organisasi (2025)</a>
+        <a href="#skills" class="mobile-nav-link p-2 rounded-lg hover:bg-yellow/40 transition-colors">Keahlian &amp; Minat</a>
+        <a href="#contact" class="mobile-nav-link p-2 rounded-lg hover:bg-yellow/40 transition-colors">Kontak</a>
+        <div class="pt-2 border-t border-navy-dark/10">
+          <a
+            href="#contact"
+            class="mobile-nav-link block text-center bg-yellow text-navy-dark font-black py-2.5 rounded-xl border-2 border-navy-dark shadow-neo-sm"
+          >
+            Hubungi Bagas ✉️
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         HERO SECTION
+    ========================================================== -->
+    <section id="hero" class="relative overflow-hidden pt-8 pb-16 sm:py-16 md:py-24 bg-cream border-b-2 border-navy-dark/15">
+      
+      <!-- Dekorasi Grafis Latar Belakang -->
+      <div class="absolute -top-16 -right-16 w-60 h-60 sm:w-80 sm:h-80 rounded-full bg-yellow/80 border-2 border-navy-dark/20 pointer-events-none -z-0" aria-hidden="true"></div>
+      <div class="absolute bottom-12 -left-10 w-28 h-48 sm:w-40 sm:h-64 bg-yellow/50 rounded-3xl -rotate-12 border-2 border-navy-dark/15 pointer-events-none -z-0" aria-hidden="true"></div>
+      
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Baris Status & Chip Minat -->
+        <div class="reveal flex flex-wrap items-center gap-2 sm:gap-3 mb-6">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border-2 border-navy-dark text-navy-dark text-xs sm:text-sm font-extrabold shadow-neo-sm">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-status"></span>
+            <span>Mahasiswa Sistem Informasi UNNES '24</span>
+          </span>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-yellow border-2 border-navy-dark text-navy-dark text-xs sm:text-sm font-bold shadow-neo-sm">
+            <span>✨</span> Berminat pada UI/UX Design
+          </span>
+        </div>
+
+        <!-- Grid Konten Hero (Teks & Foto Personal) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          
+          <!-- Kolom Teks Hero (Kiri) -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            
+            <!-- Judul Artistik & Nama -->
+            <div class="reveal">
+              <span class="font-body font-bold text-sm sm:text-base uppercase tracking-wider text-navy/90 block mb-2">
+                Personal Portfolio &amp; Space
+              </span>
+              <h1 class="font-display font-black text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-navy-dark leading-[1.05] uppercase">
+                Bagas Satrio <br />
+                <span class="text-yellow-deep inline-block drop-shadow-[2px_2px_0px_#1F3A56]">Himawan</span>
+              </h1>
+            </div>
+
+            <!-- Narasi Singkat Autentik -->
+            <p class="reveal mt-6 text-base sm:text-lg text-navy-dark/90 leading-relaxed max-w-2xl font-medium">
+              Mahasiswa S1 Sistem Informasi Universitas Negeri Semarang yang memiliki minat mendalam pada
+              <strong class="font-extrabold text-navy-dark underline decoration-yellow decoration-4 underline-offset-2">UI/UX Design</strong>,
+              tata letak web minimalis, dan manajemen organisasi. Terbiasa menggabungkan cara berpikir analitis sistem dengan rasa ingin tahu tinggi dalam merancang antarmuka digital yang rapi dan nyaman digunakan.
+            </p>
+
+            <!-- Tombol Aksi (CTA) -->
+            <div class="reveal mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#experience"
+                class="btn-neo inline-flex items-center gap-2.5 bg-navy hover:bg-navy-dark text-cream font-extrabold text-sm sm:text-base px-6 py-3.5 rounded-xl border-2 border-navy-dark shadow-neo"
+              >
+                <span>Pengalaman Organisasi</span>
+                <span class="text-yellow">🏆</span>
+              </a>
+              <a
+                href="#about"
+                class="btn-neo inline-flex items-center gap-2 bg-white hover:bg-yellow/30 text-navy-dark font-extrabold text-sm sm:text-base px-6 py-3.5 rounded-xl border-2 border-navy-dark shadow-neo"
+              >
+                <span>Tentang Saya</span>
+                <span>👋</span>
+              </a>
+              <a
+                href="#contact"
+                class="btn-neo inline-flex items-center gap-2 bg-[#FFF8C7] hover:bg-yellow text-navy-dark font-extrabold text-sm sm:text-base px-5 py-3.5 rounded-xl border-2 border-navy-dark shadow-neo"
+              >
+                <span>Kontak</span>
+                <span>✉️</span>
+              </a>
+            </div>
+
+            <!-- Mini Highlight Badges -->
+            <div class="reveal mt-10 pt-6 border-t-2 border-navy-dark/10 flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm font-bold text-navy-dark/80">
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-yellow flex items-center justify-center border border-navy-dark text-sm">🎨</span>
+                <span>Minimalist UI Layouts</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-yellow flex items-center justify-center border border-navy-dark text-sm">🐱</span>
+                <span>Cat Enthusiast</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-yellow flex items-center justify-center border border-navy-dark text-sm">🏆</span>
+                <span>5 Kepanitiaan Aktif 2025</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Kolom Foto Hero (Kanan) -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end relative">
+            <div class="reveal relative max-w-sm sm:max-w-md w-full">
+              
+              <!-- Background Accent Card -->
+              <div class="absolute inset-0 bg-yellow rounded-3xl border-2 border-navy-dark shadow-neo rotate-2 -z-0"></div>
+              
+              <!-- Container Foto Utama -->
+              <div data-antigravity="card" class="relative z-10 bg-cream-card rounded-3xl border-2 border-navy-dark p-6 overflow-hidden flex flex-col items-center">
+                
+                <!-- Pola Titik Retro di Kartu -->
+                <div class="absolute inset-0 bg-dot-pattern opacity-10 pointer-events-none"></div>
+                
+                <!-- Label Header Kartu Foto -->
+                <div class="w-full flex items-center justify-between pb-3 mb-2 border-b-2 border-navy-dark/10 text-xs font-black uppercase text-navy-dark tracking-wider">
+                  <span class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-red-400 border border-navy-dark"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-yellow border border-navy-dark"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 border border-navy-dark"></span>
+                  </span>
+                  <span>UNNES • SEMARANG</span>
+                </div>
+
+                <!-- Foto Bagas Berpikir -->
+                <div class="relative w-full aspect-[4/5] flex items-end justify-center overflow-hidden rounded-2xl bg-gradient-to-b from-yellow/30 to-cream border border-navy-dark/15">
+                  <img
+                    src="assets/foto-bagas.png"
+                    alt="Bagas Satrio Himawan"
+                    class="h-[92%] w-auto object-contain drop-shadow-[0_12px_12px_rgba(31,58,86,0.35)] transition-transform duration-500 hover:scale-105"
+                  />
+                  
+                  <!-- Floating Sticker Kiri -->
+                  <div class="animate-float absolute top-4 left-3 bg-white border-2 border-navy-dark rounded-xl px-2.5 py-1 shadow-neo-sm text-[11px] font-black text-navy-dark flex items-center gap-1">
+                    <span>💡</span> Ide &amp; Solusi
+                  </div>
+
+                  <!-- Floating Sticker Kanan -->
+                  <div class="animate-float-delayed absolute bottom-5 right-3 bg-yellow border-2 border-navy-dark rounded-xl px-2.5 py-1 shadow-neo-sm text-[11px] font-black text-navy-dark flex items-center gap-1">
+                    <span>⚡</span> 2025 Lead
+                  </div>
+                </div>
+
+                <!-- Footer Kartu Foto -->
+                <div class="w-full mt-4 text-center">
+                  <p class="font-display font-black text-lg text-navy-dark">Bagas Satrio Himawan</p>
+                  <p class="text-xs font-semibold text-navy-dark/70">Teknologi • Desain • Komunitas</p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================================
+         ABOUT ME SECTION
+    ========================================================== -->
+    <section id="about" class="py-18 md:py-24 bg-white border-b-2 border-navy-dark/15 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Seksi -->
+        <div class="reveal mb-12 sm:mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-yellow text-navy-dark text-xs font-black uppercase tracking-wider border border-navy-dark shadow-neo-sm mb-3">
+            01 • Profil
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-5xl text-navy-dark uppercase tracking-tight">
+            Tentang Saya
+          </h2>
+          <p class="text-navy-dark/75 text-sm sm:text-base max-w-2xl font-medium mt-2">
+            Mengenal lebih dekat latar belakang, filosofi belajar, dan hal-hal yang menjadi ketertarikan saya.
+          </p>
+        </div>
+
+        <!-- Grid 2 Kolom About Me -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Kolom Narasi & Fun Facts (Kiri) -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Kotak Utama Bio -->
+            <div data-antigravity="card" class="reveal bg-navy text-cream-light p-6 sm:p-8 rounded-3xl border-2 border-navy-dark shadow-neo relative overflow-hidden">
+              <div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-navy-light/40 pointer-events-none"></div>
+              
+              <h3 class="font-display font-black text-2xl sm:text-3xl text-yellow mb-4">
+                "Belajar menghubungkan sistem yang logis dengan antarmuka yang nyaman."
+              </h3>
+              
+              <p class="text-sm sm:text-base leading-relaxed text-cream-light/90 mb-4 font-medium">
+                Halo! Nama saya <strong class="text-yellow font-bold">Bagas Satrio Himawan</strong>, mahasiswa S1 Sistem Informasi Universitas Negeri Semarang (UNNES) angkatan 2024. Saya menempuh masa sekolah menengah atas di Jepara sebelum melanjutkan pendidikan tinggi di Semarang.
+              </p>
+              
+              <p class="text-sm sm:text-base leading-relaxed text-cream-light/90 font-medium">
+                Di perkuliahan, saya mendalami perancangan sistem dan rekayasa web. Namun ketertarikan terbesar saya berada pada <strong class="text-yellow font-bold">UI/UX Design</strong>. Saya senang mengeksplorasi pembuatan wireframe, alur interaksi pengguna yang logis, serta prinsip desain antarmuka yang rapi dan minimalis.
+              </p>
+            </div>
+
+            <!-- Karakter & Fun Facts Grid -->
+            <div class="reveal grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              <div class="bg-[#FFF8C7] p-5 rounded-2xl border-2 border-navy-dark shadow-neo-sm">
+                <div class="text-2xl mb-2">🎨</div>
+                <h4 class="font-display font-black text-navy-dark text-base mb-1">Visual &amp; Digital Drawing</h4>
+                <p class="text-xs text-navy-dark/80 leading-relaxed">
+                  Menyalurkan kreativitas lewat ilustrasi digital dan eksplorasi bentuk visual yang ekspresif.
+                </p>
+              </div>
+
+              <div class="bg-[#FFF8C7] p-5 rounded-2xl border-2 border-navy-dark shadow-neo-sm">
+                <div class="text-2xl mb-2">🐱</div>
+                <h4 class="font-display font-black text-navy-dark text-base mb-1">Cat Enthusiast</h4>
+                <p class="text-xs text-navy-dark/80 leading-relaxed">
+                  Penyayang kucing sejati yang selalu menemukan kesegaran pikiran dan hiburan dari tingkah lucu mereka.
+                </p>
+              </div>
+
+              <div class="bg-[#FFF8C7] p-5 rounded-2xl border-2 border-navy-dark shadow-neo-sm">
+                <div class="text-2xl mb-2">📐</div>
+                <h4 class="font-display font-black text-navy-dark text-base mb-1">Minimalist Layouts</h4>
+                <p class="text-xs text-navy-dark/80 leading-relaxed">
+                  Mengutamakan struktur tata letak yang bersih, hierarki tipografi tegas, dan bebas distraksi visual.
+                </p>
+              </div>
+
+              <div class="bg-[#FFF8C7] p-5 rounded-2xl border-2 border-navy-dark shadow-neo-sm">
+                <div class="text-2xl mb-2">📱</div>
+                <h4 class="font-display font-black text-navy-dark text-base mb-1">Doomscrolling Master</h4>
+                <p class="text-xs text-navy-dark/80 leading-relaxed">
+                  Selalu penasaran memantau tren desain terkini, interaksi digital, dan perkembangan industri teknologi.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- Stat Counters Mini -->
+            <div class="reveal grid grid-cols-3 gap-3 sm:gap-4 pt-2">
+              <div class="bg-cream-light p-4 rounded-2xl border-2 border-navy-dark text-center shadow-neo-sm">
+                <span class="block font-display font-black text-2xl sm:text-3xl text-navy">2024</span>
+                <span class="text-[11px] sm:text-xs font-bold text-navy-dark/75">Angkatan UNNES</span>
+              </div>
+              <div class="bg-cream-light p-4 rounded-2xl border-2 border-navy-dark text-center shadow-neo-sm">
+                <span class="block font-display font-black text-2xl sm:text-3xl text-navy">5</span>
+                <span class="text-[11px] sm:text-xs font-bold text-navy-dark/75">Kepanitiaan 2025</span>
+              </div>
+              <div class="bg-cream-light p-4 rounded-2xl border-2 border-navy-dark text-center shadow-neo-sm">
+                <span class="block font-display font-black text-2xl sm:text-3xl text-navy">100%</span>
+                <span class="text-[11px] sm:text-xs font-bold text-navy-dark/75">Semangat Belajar</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Kolom Foto Personal Streetwear (Kanan) -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="reveal relative max-w-sm w-full">
+              
+              <!-- Frame Neo-Brutalisme -->
+              <div class="absolute inset-0 bg-navy rounded-3xl border-2 border-navy-dark shadow-neo -rotate-2 -z-0"></div>
+              
+              <div data-antigravity="card" class="relative z-10 bg-[#FFFDF0] p-6 rounded-3xl border-2 border-navy-dark shadow-neo flex flex-col items-center">
+                
+                <!-- Tag Atas Polaroid -->
+                <div class="w-full flex items-center justify-between pb-3 border-b-2 border-navy-dark/15 text-xs font-black text-navy-dark">
+                  <span class="bg-yellow px-2 py-0.5 rounded border border-navy-dark">LOOKBOOK</span>
+                  <span>JEPARA ➔ SEMARANG</span>
+                </div>
+
+                <!-- Foto Bagas Streetwear -->
+                <div class="relative w-full aspect-[9/16] max-h-[460px] my-3 rounded-2xl overflow-hidden bg-cream flex items-center justify-center border border-navy-dark/20">
+                  
+                  <!-- Ornamen Starburst Kuning di Belakang Kepala -->
+                  <div class="absolute top-1 w-44 h-44 bg-yellow/80 star-burst -z-0 animate-pulse"></div>
+                  
+                  <img
+                    src="assets/foto-bagas2.png"
+                    alt="Foto Bagas Satrio Himawan Streetwear"
+                    class="h-[96%] w-auto object-contain relative z-10 drop-shadow-xl"
+                  />
+                  
+                  <div class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm border border-navy-dark px-2.5 py-1 rounded-lg text-[10px] font-black text-navy-dark shadow-sm">
+                    ✦ Bagas in Casual Mode
+                  </div>
+                </div>
+
+                <!-- Catatan Kaki Polaroid -->
+                <div class="w-full pt-2 text-center">
+                  <p class="font-display font-black text-base text-navy-dark uppercase">Bagas Satrio Himawan</p>
+                  <p class="text-xs font-bold text-navy-dark/70">Sistem Informasi • Creative Explorer</p>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         EDUCATION TIMELINE SECTION
+    ========================================================== -->
+    <section id="education" class="py-18 md:py-24 bg-cream border-b-2 border-navy-dark/15">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Seksi -->
+        <div class="reveal mb-12 sm:mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-yellow text-navy-dark text-xs font-black uppercase tracking-wider border border-navy-dark shadow-neo-sm mb-3">
+            02 • Perjalanan
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-5xl text-navy-dark uppercase tracking-tight">
+            Pendidikan &amp; Studi
+          </h2>
+          <p class="text-navy-dark/75 text-sm sm:text-base max-w-2xl font-medium mt-2">
+            Langkah akademik yang membentuk logika berpikir analitis dan fondasi keilmuan teknologi saya.
+          </p>
+        </div>
+
+        <!-- Timeline Vertikal Elegan -->
+        <div class="relative border-l-4 border-navy-dark/30 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-10">
+
+          <!-- Item 1: Kuliah S1 Sistem Informasi UNNES -->
+          <div class="reveal relative">
+            <div class="absolute -left-[35px] sm:-left-[51px] top-6 w-8 h-8 rounded-full bg-navy text-yellow border-2 border-navy-dark flex items-center justify-center font-bold text-xs ring-4 ring-cream shadow-sm">
+              🎓
+            </div>
+
+            <div data-antigravity="card" class="bg-white p-6 sm:p-8 rounded-3xl border-2 border-navy-dark shadow-neo">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-yellow text-navy-dark font-extrabold text-xs border border-navy-dark shadow-neo-sm">
+                  <span>●</span> 2024 — Sekarang (Mahasiswa Aktif)
+                </span>
+                <span class="text-xs font-bold text-navy-dark/70">Semarang, Jawa Tengah</span>
+              </div>
+
+              <h3 class="font-display font-black text-2xl sm:text-3xl text-navy-dark tracking-wide mb-1">
+                Universitas Negeri Semarang
+              </h3>
+              <p class="font-bold text-sm text-navy mb-4">
+                S1 Sistem Informasi • Jurusan Ilmu Komputer, Fakultas MIPA
+              </p>
+
+              <p class="text-xs sm:text-sm text-navy-dark/90 leading-relaxed font-medium mb-4">
+                Menempuh studi di bidang Sistem Informasi untuk mengintegrasikan proses bisnis, teknologi komputer, dan interaksi pengguna. Mempelajari rekayasa perangkat lunak, sistem basis data, pemrograman web, serta aktif mengeksplorasi antarmuka pengguna (UI/UX).
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2 border-t border-navy-dark/10">
+                <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-cream text-navy-dark border border-navy-dark/20">Minat UI/UX Design</span>
+                <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-cream text-navy-dark border border-navy-dark/20">Pemrograman Web</span>
+                <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-cream text-navy-dark border border-navy-dark/20">Analisis Sistem</span>
+                <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-cream text-navy-dark border border-navy-dark/20">Hima Ilkom Active Member</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: SMA Negeri 1 Jepara -->
+          <div class="reveal relative">
+            <div class="absolute -left-[35px] sm:-left-[51px] top-6 w-8 h-8 rounded-full bg-yellow text-navy-dark border-2 border-navy-dark flex items-center justify-center font-bold text-xs ring-4 ring-cream shadow-sm">
+              🏫
+            </div>
+
+            <div data-antigravity="card" class="bg-[#FFF8C7] p-6 sm:p-8 rounded-3xl border-2 border-navy-dark shadow-neo">
+              <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-navy-dark font-extrabold text-xs border border-navy-dark shadow-neo-sm">
+                  <span>●</span> 2021 — 2024 (Lulus)
+                </span>
+                <span class="text-xs font-bold text-navy-dark/70">Jepara, Jawa Tengah</span>
+              </div>
+
+              <h3 class="font-display font-black text-2xl sm:text-3xl text-navy-dark tracking-wide mb-1">
+                SMA Negeri 1 Jepara
+              </h3>
+              <p class="font-bold text-sm text-navy mb-4">
+                Peminatan Matematika &amp; Ilmu Pengetahuan Alam (MIPA)
+              </p>
+
+              <p class="text-xs sm:text-sm text-navy-dark/90 leading-relaxed font-medium mb-4">
+                Menyelesaikan pendidikan menengah atas dengan fokus pada logika analitis, pemecahan masalah matematis, serta ketertarikan awal pada seni visual dan kreativitas digital.
+              </p>
+
+              <div class="flex flex-wrap gap-2 pt-2 border-t border-navy-dark/10">
+                <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-white text-navy-dark border border-navy-dark/20">Logika Matematis</span>
+                <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-white text-navy-dark border border-navy-dark/20">Digital Drawing Foundation</span>
+                <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-white text-navy-dark border border-navy-dark/20">Kolaborasi Tim</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ORGANIZATION EXPERIENCES SECTION (STACKED 1 KOLOM SESUAI REFERENSI DESAIN)
+    ========================================================== -->
+    <section id="experience" class="py-16 md:py-24 bg-cream border-b-2 border-navy-dark/15">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-10">
+
+        <!-- Judul Section Rata Tengah Sesuai Gambar -->
+        <h2 class="font-display font-black text-3xl sm:text-4xl md:text-5xl text-navy-dark mb-10 tracking-wide text-center uppercase">
+          ORGANIZATION EXPERIENCES
+        </h2>
+
+        <!-- Container Kartu Organisasi (Tumpuk 1 Kolom ke Bawah) -->
+        <div class="flex flex-col gap-6 md:gap-8">
+
+          <!-- 1. NAVY: Studi Banding Hima Ilkom -->
+          <div data-antigravity="card" class="reveal relative bg-navy p-6 md:p-8 rounded-2xl shadow-md transition-all duration-300 overflow-hidden">
+            <span class="absolute top-6 right-6 px-4 py-1 bg-[#FFF8C7] text-navy-dark font-body font-bold text-xs md:text-sm rounded-full">
+              2025
+            </span>
+            <div>
+              <span class="text-yellow/80 text-xs md:text-sm font-semibold tracking-wider uppercase block mb-1">
+                Studi Banding Hima Ilkom
+              </span>
+              <h3 class="font-display font-black text-xl md:text-2xl text-yellow tracking-wide uppercase mb-4">
+                KOORDINATOR SIE. BENDAHARA &amp; KONSUMSI
+              </h3>
+              <ul class="space-y-2 text-white/95 font-body text-xs md:text-sm leading-relaxed">
+                <li class="flex items-start gap-2">
+                  <span class="text-yellow mt-1">✦</span>
+                  <span>Mengelola alokasi anggaran operasional dan menyusun Rancangan Anggaran Biaya secara akurat untuk mendukung seluruh kebutuhan rangkaian kegiatan.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-yellow mt-1">✦</span>
+                  <span>Berkoordinasi dengan katering atau vendor konsumsi serta mengawasi alur distribusi makanan tepat waktu bagi seluruh peserta dan panitia.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-yellow mt-1">✦</span>
+                  <span>Menyusun Laporan Pertanggungjawaban keuangan yang transparan dan akuntabel pasca-kegiatan selesai.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2. KREM: Lentera Kasih -->
+          <div data-antigravity="card" class="reveal relative bg-[#FFF8C7] border-2 border-navy-dark/10 p-6 md:p-8 rounded-2xl shadow-sm transition-all duration-300 overflow-hidden">
+            <span class="absolute top-6 right-6 px-4 py-1 bg-navy text-yellow font-body font-bold text-xs md:text-sm rounded-full">
+              2025
+            </span>
+            <div>
+              <span class="text-navy-dark/70 text-xs md:text-sm font-semibold tracking-wider uppercase block mb-1">
+                Lentera Kasih
+              </span>
+              <h3 class="font-display font-black text-xl md:text-2xl text-navy-dark tracking-wide uppercase mb-4">
+                KOORDINATOR SIE. PERKAP
+              </h3>
+              <ul class="space-y-2 text-navy-dark/95 font-body text-xs md:text-sm leading-relaxed">
+                <li class="flex items-start gap-2">
+                  <span class="text-navy-dark font-bold mt-1">✦</span>
+                  <span>Memimpin pengadaan dan pendataan seluruh kebutuhan logistik serta perlengkapan kegiatan bakti sosial.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-navy-dark font-bold mt-1">✦</span>
+                  <span>Berkoordinasi langsung dengan pihak terkait mengenai tata letak area dan fasilitas teknis guna memastikan acara berlangsung aman dan nyaman.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-navy-dark font-bold mt-1">✦</span>
+                  <span>Mengawasi mobilisasi dan demobilisasi barang untuk meminimalisir risiko kerusakan atau kehilangan aset perlengkapan.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 3. NAVY: Interface -->
+          <div data-antigravity="card" class="reveal relative bg-navy p-6 md:p-8 rounded-2xl shadow-md transition-all duration-300 overflow-hidden">
+            <span class="absolute top-6 right-6 px-4 py-1 bg-[#FFF8C7] text-navy-dark font-body font-bold text-xs md:text-sm rounded-full">
+              2025
+            </span>
+            <div>
+              <span class="text-yellow/80 text-xs md:text-sm font-semibold tracking-wider uppercase block mb-1">
+                Interface
+              </span>
+              <h3 class="font-display font-black text-xl md:text-2xl text-yellow tracking-wide uppercase mb-4">
+                STAFF AHLI SIE. PERKAP
+              </h3>
+              <ul class="space-y-2 text-white/95 font-body text-xs md:text-sm leading-relaxed">
+                <li class="flex items-start gap-2">
+                  <span class="text-yellow mt-1">✦</span>
+                  <span>Memberikan supervisi dan arahan teknis kepada tim perkap dalam penyiapan panggung, tata suara, dan tata letak area untuk acara skala besar.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-yellow mt-1">✦</span>
+                  <span>Merancang mitigasi risiko kendala teknis perlengkapan di lapangan serta merespons cepat kebutuhan darurat selama acara berlangsung.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-yellow mt-1">✦</span>
+                  <span>Mengoptimalkan efisiensi penggunaan alat dan pemeliharaan aset inventaris organisasi agar siap digunakan secara maksimal.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 4. KREM: Ilkom Mengajar -->
+          <div data-antigravity="card" class="reveal relative bg-[#FFF8C7] border-2 border-navy-dark/10 p-6 md:p-8 rounded-2xl shadow-sm transition-all duration-300 overflow-hidden">
+            <span class="absolute top-6 right-6 px-4 py-1 bg-navy text-yellow font-body font-bold text-xs md:text-sm rounded-full">
+              2025
+            </span>
+            <div>
+              <span class="text-navy-dark/70 text-xs md:text-sm font-semibold tracking-wider uppercase block mb-1">
+                Ilkom Mengajar
+              </span>
+              <h3 class="font-display font-black text-xl md:text-2xl text-navy-dark tracking-wide uppercase mb-4">
+                KOORDINATOR SIE. BENDAHARA &amp; KONSUMSI
+              </h3>
+              <ul class="space-y-2 text-navy-dark/95 font-body text-xs md:text-sm leading-relaxed">
+                <li class="flex items-start gap-2">
+                  <span class="text-navy-dark font-bold mt-1">✦</span>
+                  <span>Mengatur arus kas dan efisiensi dana untuk memenuhi kebutuhan media pembelajaran, transportasi, dan konsumsi tim pengajar.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-navy-dark font-bold mt-1">✦</span>
+                  <span>Merancang skema penyediaan konsumsi harian yang fleksibel dan tepat waktu bagi seluruh panitia serta pihak penerima program.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-navy-dark font-bold mt-1">✦</span>
+                  <span>Pencatatan transaksi secara real-time untuk menjamin transparansi dan kerapian pelaporan keuangan program pengabdian.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 5. NAVY: Technofest -->
+          <div data-antigravity="card" class="reveal relative bg-navy p-6 md:p-8 rounded-2xl shadow-md transition-all duration-300 overflow-hidden">
+            <span class="absolute top-6 right-6 px-4 py-1 bg-[#FFF8C7] text-navy-dark font-body font-bold text-xs md:text-sm rounded-full">
+              2025
+            </span>
+            <div>
+              <span class="text-yellow/80 text-xs md:text-sm font-semibold tracking-wider uppercase block mb-1">
+                Technofest
+              </span>
+              <h3 class="font-display font-black text-xl md:text-2xl text-yellow tracking-wide uppercase mb-4">
+                KOORDINATOR SIE. TICKETING
+              </h3>
+              <ul class="space-y-2 text-white/95 font-body text-xs md:text-sm leading-relaxed">
+                <li class="flex items-start gap-2">
+                  <span class="text-yellow mt-1">✦</span>
+                  <span>Mengelola sistem penjualan dan pendistribusian tiket secara langsung maupun prasandang yang berhasil menarik ratusan pengunjung.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-yellow mt-1">✦</span>
+                  <span>Mengkoordinasikan alur registrasi dan validasi tiket di area pintu masuk untuk mencegah penumpukan antrean pengunjung.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-yellow mt-1">✦</span>
+                  <span>Melakukan rekonsiliasi data penjualan tiket secara presisi bersama tim bendahara untuk memastikan kesesuaian pendataan pemasukan acara.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SKILLS & TOOLKIT SECTION
+    ========================================================== -->
+    <section id="skills" class="py-18 md:py-24 bg-white border-b-2 border-navy-dark/15">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Seksi -->
+        <div class="reveal mb-12 sm:mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-yellow text-navy-dark text-xs font-black uppercase tracking-wider border border-navy-dark shadow-neo-sm mb-3">
+            04 • Toolkit
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-5xl text-navy-dark uppercase tracking-tight">
+            Keahlian &amp; Minat
+          </h2>
+          <p class="text-navy-dark/75 text-sm sm:text-base max-w-2xl font-medium mt-2">
+            Perpaduan antara minat eksplorasi desain antarmuka, fondasi teknologi web, dan pengalaman kepemimpinan lapangan.
+          </p>
+        </div>
+
+        <!-- Grid 3 Kategori Keahlian -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Kategori 1: UI/UX & Desain Grafis -->
+          <div data-antigravity="card" class="reveal bg-white p-6 rounded-3xl border-2 border-navy-dark shadow-neo flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-yellow border-2 border-navy-dark shadow-neo-sm flex items-center justify-center text-2xl mb-4">
+                🎨
+              </div>
+              <h3 class="font-display font-black text-xl text-navy-dark mb-2">
+                Minat UI/UX &amp; Desain
+              </h3>
+              <p class="text-xs text-navy-dark/75 mb-4 font-medium">
+                Alat visual dan eksplorasi yang sedang saya tekuni untuk merancang antarmuka terstruktur.
+              </p>
+
+              <ul class="space-y-2.5 text-xs sm:text-sm font-bold text-navy-dark">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-deep"></span>
+                  <span>Figma (Wireframing &amp; Prototyping)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-deep"></span>
+                  <span>Canva (Visual &amp; Konten Grafis)</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-deep"></span>
+                  <span>Pinterest Moodboarding</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-deep"></span>
+                  <span>Minimalist Layout Exploration</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-deep"></span>
+                  <span>Digital Drawing &amp; Sketsa</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="mt-6 pt-3 border-t border-navy-dark/10 text-[11px] font-extrabold text-navy uppercase tracking-wide">
+              ✦ Bidang yang Diminati
+            </div>
+          </div>
+
+          <!-- Kategori 3: Manajemen Kepanitiaan (Riil) -->
+          <div data-antigravity="card" class="reveal bg-white p-6 rounded-3xl border-2 border-navy-dark shadow-neo flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-yellow border-2 border-navy-dark shadow-neo-sm flex items-center justify-center text-2xl mb-4">
+                📋
+              </div>
+              <h3 class="font-display font-black text-xl text-navy-dark mb-2">
+                Manajemen Acara
+              </h3>
+              <p class="text-xs text-navy-dark/75 mb-4 font-medium">
+                Pengalaman memimpin divisi strategis di 5 kepanitiaan acara kampus tahun 2025.
+              </p>
+
+              <ul class="space-y-2.5 text-xs sm:text-sm font-bold text-navy-dark">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-deep"></span>
+                  <span>RAB &amp; Laporan Pertanggungjawaban</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-deep"></span>
+                  <span>Manajemen Logistik &amp; Perkap</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-deep"></span>
+                  <span>Operasional &amp; Validasi Ticketing</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-deep"></span>
+                  <span>Koordinasi Vendor &amp; Fasilitas</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-yellow-deep"></span>
+                  <span>Mitigasi Kendala Lapangan</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-6 pt-3 border-t border-navy-dark/10 text-[11px] font-extrabold text-navy uppercase tracking-wide">
+              ✦ Praktik Nyata 2025
+            </div>
+          </div>
+
+          <!-- Kategori 4: Soft Skills & Karakter -->
+          <div data-antigravity="card" class="reveal bg-white p-6 rounded-3xl border-2 border-navy-dark shadow-neo flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-2xl bg-[#FFF8C7] border-2 border-navy-dark shadow-neo-sm flex items-center justify-center text-2xl mb-4">
+                🤝
+              </div>
+              <h3 class="font-display font-black text-xl text-navy-dark mb-2">
+                Soft Skills
+              </h3>
+              <p class="text-xs text-navy-dark/75 mb-4 font-medium">
+                Karakter personal yang mendukung kerja sama tim dan penyelesaian tanggung jawab secara solid.
+              </p>
+
+              <ul class="space-y-2.5 text-xs sm:text-sm font-bold text-navy-dark">
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-navy"></span>
+                  <span>Kerja Sama Tim yang Adaptif</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-navy"></span>
+                  <span>Komunikasi &amp; Negosiasi</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-navy"></span>
+                  <span>Kerapian &amp; Detail-Oriented</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-navy"></span>
+                  <span>Keterbukaan terhadap Masukan</span>
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-navy"></span>
+                  <span>Keinginan Belajar yang Tinggi</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-6 pt-3 border-t border-navy-dark/10 text-[11px] font-extrabold text-navy uppercase tracking-wide">
+              ✦ Mindset Kolaboratif
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT & COLLABORATION SECTION
+    ========================================================== -->
+    <section id="contact" class="py-18 md:py-24 bg-cream relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Seksi -->
+        <div class="reveal mb-12 sm:mb-16 text-center max-w-2xl mx-auto">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-yellow text-navy-dark text-xs font-black uppercase tracking-wider border border-navy-dark shadow-neo-sm mb-3">
+            05 • Terhubung
+          </div>
+          <h2 class="font-display font-black text-3xl sm:text-5xl text-navy-dark uppercase tracking-tight">
+            Mari Berkolaborasi!
+          </h2>
+          <p class="text-navy-dark/75 text-sm sm:text-base font-medium mt-2">
+            Ingin berdiskusi seputar sistem informasi, eksplorasi UI/UX, atau mengajak kerja sama kepanitiaan? Pintu selalu terbuka.
+          </p>
+        </div>
+
+        <!-- Grid Kontak (Informasi & Sosial) -->
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
+          
+          <!-- Kartu Email & Salin 1-Klik -->
+          <div data-antigravity="card" class="reveal bg-cream-card p-6 sm:p-8 rounded-3xl border-2 border-navy-dark shadow-neo flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold uppercase text-navy/80 block mb-1">Kirim Email Langsung</span>
+              <h3 class="font-display font-black text-xl sm:text-2xl text-navy-dark mb-4">Surel / Email</h3>
+
+              <div class="p-3.5 rounded-2xl bg-white border-2 border-navy-dark/20 flex items-center justify-between gap-3">
+                <span class="font-mono text-xs sm:text-sm font-bold text-navy-dark truncate">
+                  bagashimawan601@gmail.com
+                </span>
+                <button
+                  id="copyEmail"
+                  type="button"
+                  data-email="bagashimawan601@gmail.com"
+                  class="btn-neo px-3 py-1.5 rounded-xl bg-yellow hover:bg-yellow-deep text-navy-dark font-extrabold text-xs border border-navy-dark shadow-neo-sm shrink-0 flex items-center gap-1.5"
+                >
+                  <span>Salin</span>
+                  <span>📋</span>
+                </button>
+              </div>
+
+              <!-- Toast Alert Salin Email -->
+              <div
+                id="copyToast"
+                class="opacity-0 pointer-events-none translate-y-2 transition-all duration-300 mt-2 px-3 py-1.5 bg-navy text-yellow text-xs font-bold rounded-xl border border-navy-dark text-center"
+              >
+                ✓ Berhasil disalin ke clipboard!
+              </div>
+
+              <p class="text-xs text-navy-dark/70 font-medium mt-4">
+                Silakan hubungi melalui surel untuk pertanyaan, diskusi, atau keperluan kerja sama. Biasanya membalas dalam waktu 1x24 jam.
+              </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-navy-dark/15 flex items-center gap-2 text-xs font-bold text-navy-dark/80">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-status"></span>
+              <span>Status: Terbuka untuk diskusi &amp; kolaborasi</span>
+            </div>
+          </div>
+
+          <!-- Kartu Tautan Media Sosial -->
+          <div data-antigravity="card" class="reveal bg-[#FFF8C7] p-6 sm:p-8 rounded-3xl border-2 border-navy-dark shadow-neo flex flex-col justify-between">
+            <div>
+              <span class="text-xs font-bold uppercase text-navy/80 block mb-1">Sosial &amp; Jejaring</span>
+              <h3 class="font-display font-black text-xl sm:text-2xl text-navy-dark mb-4">Temukan Saya di Web</h3>
+
+              <div class="grid grid-cols-2 gap-3">
+                <a
+                  href="https://www.linkedin.com/in/bagas-himawan-112b12343?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-neo flex items-center gap-2.5 p-3 rounded-xl bg-white border-2 border-navy-dark text-xs sm:text-sm font-bold text-navy-dark shadow-neo-sm hover:bg-yellow/30"
+                >
+                  <span class="text-base">💼</span>
+                  <span>LinkedIn</span>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/bgstrrrr_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-neo flex items-center gap-2.5 p-3 rounded-xl bg-white border-2 border-navy-dark text-xs sm:text-sm font-bold text-navy-dark shadow-neo-sm hover:bg-yellow/30"
+                >
+                  <span class="text-base">📸</span>
+                  <span>Instagram</span>
+                </a>
+
+                <a
+                  href="https://github.com/suwwu22"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-neo flex items-center gap-2.5 p-3 rounded-xl bg-white border-2 border-navy-dark text-xs sm:text-sm font-bold text-navy-dark shadow-neo-sm hover:bg-yellow/30"
+                >
+                  <span class="text-base">🐙</span>
+                  <span>GitHub</span>
+                </a>
+
+                <a
+                  href="https://wa.me/6282341324148"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-neo flex items-center gap-2.5 p-3 rounded-xl bg-white border-2 border-navy-dark text-xs sm:text-sm font-bold text-navy-dark shadow-neo-sm hover:bg-yellow/30"
+                >
+                  <span class="text-base">💬</span>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Lokasi Info -->
+            <div class="mt-6 pt-4 border-t border-navy-dark/15 flex items-center gap-2 text-xs font-bold text-navy-dark/80">
+              <span>📍</span>
+              <span>Berbasis di Semarang &amp; Jepara, Jawa Tengah</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="bg-brown text-cream-light py-12 md:py-16 border-t-4 border-navy-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pb-10 border-b border-cream-light/20">
+        
+        <!-- Brand & Tagline -->
+        <div class="text-center md:text-left">
+          <div class="flex items-center justify-center md:justify-start gap-2.5 mb-2">
+            <div class="w-8 h-8 rounded-lg bg-yellow text-navy font-display font-black text-lg flex items-center justify-center border border-navy-dark">
+              B
+            </div>
+            <span class="font-display font-black text-xl text-yellow tracking-wide">
+              BAGAS SATRIO HIMAWAN
+            </span>
+          </div>
+          <p class="text-xs text-cream-light/80 max-w-sm">
+            Mahasiswa Sistem Informasi Universitas Negeri Semarang yang aktif berorganisasi dan menekuni minat di bidang UI/UX Design &amp; Web.
+          </p>
+        </div>
+
+        <!-- Navigasi Footer Cepat -->
+        <div class="flex flex-wrap justify-center gap-6 text-xs font-bold text-cream-light/90">
+          <a href="#hero" class="hover:text-yellow transition-colors">Beranda</a>
+          <a href="#about" class="hover:text-yellow transition-colors">Tentang</a>
+          <a href="#education" class="hover:text-yellow transition-colors">Pendidikan</a>
+          <a href="#experience" class="hover:text-yellow transition-colors">Organisasi</a>
+          <a href="#skills" class="hover:text-yellow transition-colors">Keahlian &amp; Minat</a>
+          <a href="#contact" class="hover:text-yellow transition-colors">Kontak</a>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cream-light/70 font-medium">
+        <p>© 2025 — 2026 Bagas Satrio Himawan. Didesain dengan estetika neo-brutalisme &amp; dibangun dengan Tailwind CSS.</p>
+        <p class="flex items-center gap-1.5">
+          <span>Dibuat dengan</span>
+          <span class="text-yellow">💛</span>
+          <span>oleh Bagas</span>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       TOMBOL KEMBALI KE ATAS (BACK TO TOP)
+  ========================================================== -->
+  <button
+    id="backToTop"
+    type="button"
+    aria-label="Kembali ke atas"
+    class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-2xl bg-yellow text-navy-dark border-2 border-navy-dark shadow-neo opacity-0 pointer-events-none translate-y-4 transition-all duration-300 flex items-center justify-center hover:bg-yellow-deep active:scale-95"
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- Skrip JavaScript -->
+  <script src="js/app.js"></script>
+  <script src="antigravity.js"></script>
+</body>
+</html>

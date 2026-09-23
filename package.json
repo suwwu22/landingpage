@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-bagas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website portofolio Bagas Satrio Himawan - dibangun dengan Tailwind CSS",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./css/style.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./css/style.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

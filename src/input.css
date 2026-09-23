@@ -1,0 +1,145 @@
+/* Daftarkan Font Lokal */
+@font-face {
+  font-family: 'Paper-Inko';
+  src: url('../assets/fonts/Paper-Inko.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color: #1F3A56;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FDF6D8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2A4B6C;
+    border-radius: 9999px;
+    border: 2px solid #FDF6D8;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #1F3A56;
+  }
+
+  ::selection {
+    background-color: #F7DE7A;
+    color: #1F3A56;
+  }
+}
+
+@layer components {
+  /* Starburst background decoration */
+  .star-burst {
+    clip-path: polygon(
+      50% 0%, 58% 33%, 90% 12%, 68% 42%, 100% 50%,
+      68% 58%, 90% 88%, 58% 67%, 50% 100%, 42% 67%,
+      10% 88%, 32% 58%, 0% 50%, 32% 42%, 10% 12%
+    );
+  }
+
+  /* Subtle dot grid pattern */
+  .bg-dot-pattern {
+    background-image: radial-gradient(#1F3A56 1.2px, transparent 1.2px);
+    background-size: 20px 20px;
+  }
+
+  .bg-dot-pattern-light {
+    background-image: radial-gradient(rgba(247, 222, 122, 0.25) 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+  }
+
+  /* Neo-brutalist button click effect */
+  .btn-neo {
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-neo:hover {
+    transform: translate(-2px, -2px);
+  }
+  .btn-neo:active {
+    transform: translate(2px, 2px);
+  }
+
+  /* Scroll reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Floating animation */
+  @keyframes subtle-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  .animate-float {
+    animation: subtle-float 4s ease-in-out infinite;
+  }
+  .animate-float-delayed {
+    animation: subtle-float 5s ease-in-out 1.5s infinite;
+  }
+
+  /* Pulse glowing status dot */
+  @keyframes status-pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.3);
+    }
+  }
+  .animate-status {
+    animation: status-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Infinite marquee scroll */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    display: inline-flex;
+    animation: marquee 20s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .animate-float,
+  .animate-float-delayed,
+  .animate-status {
+    animation: none !important;
+  }
+}
